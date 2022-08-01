@@ -14,11 +14,11 @@ public class IncomesController {
     
     @RequestMapping("/Incomes")
     @ResponseBody
-   public List<Income> CheckList() {
+   public List<IncomeDto> CheckList() {
     
      Income income = new Income("I get 10000.00 USD Everyday", 10000.0);
 
-     return Arrays.asList(income, income, income);
+     return IncomeDto.convert(Arrays.asList(income, income, income));
 
    }
     
